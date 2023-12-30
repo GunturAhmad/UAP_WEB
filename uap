@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Toko</title>
+        <style>
+            table{
+                width: 15%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            table th, td{
+                border: 2px solid #000000
+            }
+            input{
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Kode</th>
+                <th>Barang</th>
+                <th>Harga</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Barang A</td>
+                <td id = "hargaBarangA">10000</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Barang B</td>
+                <td id = "hargaBarangB">20000</td>
+            </tr><tr>
+                <td>003</td>
+                <td>Barang C</td>
+                <td id = "hargaBarangC">30000</td>
+            </tr>
+        </table>
+        <div>
+            <form action = "" onsubmit = "total()">
+            <h1>Inputan User</h1>
+            <label for = "kodeInput">Masukan Kode : </label>
+            <input type = "text" id = "Kode Input"><br>
+
+            Banyaknya Barang :
+            <label>
+                <input type = "text" id = "Jumlah Barang"><br>
+                <input type = "Submit">
+            </form>
+            </label>
+        </div>
+
+        <script>
+            function total(){
+                let kode
+                let kodeHarga
+                let jumlahTotal
+                let totalHarga
+
+                kode = 
+                document.getElementById('kodeInput').value
+                if(kode === "001"){
+                    kodeHarga = "10000"
+                    jumlahTotal =
+                    document.getElementById('jumlahBarang').value
+                    totalHarga = kodeHarga * jumlahTotal
+                }
+                else if(kode === "002"){
+                    kodeHarga = "20000"
+                    jumlahTotal =
+                    document.getElementById('jumlahBarang').value
+                    totalHarga = kodeHarga * jumlahTotal
+                }
+                else if(kode === "003"){
+                    kodeHarga = "30000"
+                    jumlahTotal =
+                    document.getElementById('jumlahBarang').value
+                    totalHarga = kodeHarga * jumlahTotal
+                }
+                window.alert("Total Pembayaran Anda Adalah : " + totalHarga)
+                window.prompt("Masukan Uang User : ")
+
+            }
+        </script>
+    </body>
+</html>
